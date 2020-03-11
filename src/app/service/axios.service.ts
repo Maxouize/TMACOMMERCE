@@ -58,4 +58,9 @@ export class AxiosService {
         let res = await this.axios.post('http://172.20.10.10:8000/api/commande/', data);
         return res;
     }
+    // PATCH
+    async patchAcheteur(data) {
+        let res = await this.axios.patch(`http://172.20.10.10:8000/api/acheteur/${data.id}/`, data);
+        return res;
+    }
 }

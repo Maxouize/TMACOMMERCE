@@ -21,6 +21,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { HomeViewComponent } from './view/home-view/home-view.component';
 import { CommonModule } from '@angular/common';
+import { AdminComponent } from './view/admin/admin.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { CommonModule } from '@angular/common';
     AppComponent,
     HomeViewComponent,
     NavbarComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

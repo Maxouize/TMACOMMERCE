@@ -33,7 +33,7 @@ export class HomeViewComponent implements OnInit {
     });
 
     this.axiosService.getAcheteurs().then(acheteurs => {
-      this.listAcheteur = acheteurs.data;
+      this.listAcheteur = acheteurs.data.filter(elem => elem.actif);
       console.log('listAcheteur', this.listAcheteur);
     });
 

@@ -9,7 +9,8 @@ declare interface RouteInfo {
   active: boolean;
 }
 export const ROUTES: RouteInfo[] = [
-    { path: '/home', title: 'Home', icon: '',  active: true}
+    { path: '/home', title: 'Home', icon: '',  active: true},
+    { path: '/admin', title: 'Admin', icon: '',  active: true}
   ];
 
 @Component({
