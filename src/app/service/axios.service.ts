@@ -20,42 +20,42 @@ export class AxiosService {
     /**
      * 
      */
-    async getDataTestAxios(): Promise<any[]> {
+    async getDataTestAxios(){
         let res = await this.axios.get('https://api.github.com/users/KrunalLathiya');
         return res;
     }
     // GET ENDPOINTS
-    async getMagasins(): Promise<any[]> {
-        let res = await this.axios.get('https://172.20.10.10:8000/api/magasin/');
+    async getMagasins() {
+        let res = await this.axios.get('http://172.20.10.10:8000/api/magasin/');
         return res;
     }
-    async getAcheteurs(): Promise<any[]> {
-        let res = await this.axios.get('https://172.20.10.10:8000/api/acheteur/');
+    async getAcheteurs() {
+        let res = await this.axios.get('http://172.20.10.10:8000/api/acheteur/');
         return res;
     }
-    async getProduits(): Promise<any[]> {
-        let res = await this.axios.get('https://172.20.10.10:8000/api/produit/');
+    async getProduits() {
+        let res = await this.axios.get('http://172.20.10.10:8000/api/produit/');
         return res;
     }
-    async getCommandes(): Promise<any[]> {
-        let res = await this.axios.get('https://172.20.10.10:8000/api/commande/');
+    async getCommandes() {
+        let res = await this.axios.get('http://172.20.10.10:8000/api/commande/');
         return res;
     }
     // POST ENDPOINTS
-    async postMagasin(data): Promise<any[]> {
-        let res = await this.axios.post('https://172.20.10.10:8000/api/magasin/', data);
+    async postMagasin(data) {
+        let res = await this.axios.post('http://172.20.10.10:8000/api/magasin/', data);
         return res;
     }
-    async postAcheteur(data): Promise<any[]> {
-        let res = await this.axios.post('https://172.20.10.10:8000/api/acheteur/', data);
+    async postAcheteur(data) {
+        let res = await this.axios.post('http://172.20.10.10:8000/api/acheteur/', data);
         return res;
     }
-    async postProduit(data): Promise<any[]> {
-        let res = await this.axios.post('https://172.20.10.10:8000/api/produit/', data);
+    async postProduit(data){
+        let res = await this.axios.post('http://172.20.10.10:8000/api/produit/', data);
         return res;
     }
-    async postCommande(data): Promise<any[]> {
-        let res = await this.axios.post('https://172.20.10.10:8000/api/commande/', data);
+    async postCommande(data){
+        let res = await this.axios.post('http://172.20.10.10:8000/api/commande/', data);
         return res;
     }
 }

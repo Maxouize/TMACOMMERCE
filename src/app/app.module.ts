@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -14,11 +14,13 @@ import {MatTableModule} from '@angular/material/Table';
 import {MatTooltipModule} from '@angular/material/Tooltip';
 import { MatPaginatorModule } from '@angular/material';
 import {MatSortModule} from '@angular/material/Sort';
+import { MatSelectModule } from '@angular/material/select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { HomeViewComponent } from './view/home-view/home-view.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -41,7 +43,10 @@ import { HomeViewComponent } from './view/home-view/home-view.component';
     MatTableModule,
     MatTooltipModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    CommonModule
   ],
   providers: [HttpClientModule,
     // {

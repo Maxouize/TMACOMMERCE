@@ -1,1 +1,37 @@
-<p>home-view works!</p>
+<form [formGroup]="achatForm" (submit)="onSubmit()">
+    <mat-form-field class="example-full-width">
+        <mat-select formControlName="magasin"
+            placeholder="Liste de magasin" required>
+            <mat-option *ngFor="let magasin of listMagasin"
+                [value]="magasin?.id">
+                {{ magasin?.ville }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-select formControlName="produit"
+            placeholder="Liste de produit" required>
+            <mat-option *ngFor="let produit of listProduit"
+                [value]="produit?.id">
+                {{ produit?.nom }} {{ produit?.prix }} €
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput formControlName="quantite"
+            placeholder="Quantité" type="numer">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-select formControlName="acheteur"
+            placeholder="Liste des acheteurs" required>
+            <mat-option *ngFor="let acheteur of listAcheteur"
+                [value]="acheteur?.id">
+                {{ acheteur?.nom }}  {{ acheteur?.prenom }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <p *ngIf="message"> {{message}} </p>
+    <button mat-raised-button class="btn my-primary pull-right">
+        Acheter
+    </button>
+</form>
