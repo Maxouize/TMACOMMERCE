@@ -50,13 +50,15 @@ export class HomeViewComponent implements OnInit {
   }
 
   public onSubmit() {
-    console.log(this.achatForm.getRawValue());
-    const formData = this.achatForm.getRawValue();
-    const acheteur = _.find(this.listAcheteur, ['id', formData.acheteur]);
-    const magasin = _.find(this.listMagasin, ['id', formData.magasin]);
-    const produit = _.find(this.listProduit, ['id', formData.produit]);
-    this.message = 'Bonjour monsieur ' + acheteur.nom + ', vous avez acheter sur le magasin ' 
-      + magasin.ville + ', le produit ' + produit.nom + ' à ' + produit.prix + '€.';
-    this.axiosService.postCommande(this.achatForm.getRawValue());
+    if (this.achatForm.valid) {
+      const formData = this.achatForm.getRawValue();
+      const acheteur = _.find(this.listAcheteur, ['id', formData.acheteur]);
+      const magasin = _.find(this.listMagasin, ['id', formData.magasin]);
+      const produit = _.find(this.listProduit, ['id', formData.produit]);
+      _.assign(formData, { 'date': new Date() });
+      this.message = 'Bonjour monsieur ' + acheteur.nom + ', vous avez acheter sur le magasin ' 
+        + magasin.ville + ', le produit ' + produit.nom + ' à ' + produit.prix + '€.';
+      this.axiosService.postCommande(formData);
+    }
   }
 }

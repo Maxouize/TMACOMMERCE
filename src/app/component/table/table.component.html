@@ -1,0 +1,39 @@
+<div class="mat-elevation-z8" style="max-width: 700px;">
+    <mat-table [dataSource]="dataSource" matSort>
+        <ng-container matColumnDef="idCommande">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> No.
+            </mat-header-cell>
+            <mat-cell *matCellDef="let issue">
+                {{issue.id}}
+            </mat-cell>
+        </ng-container>
+
+        <!-- summary Column -->
+        <ng-container matColumnDef="client">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>
+                Résumé</mat-header-cell>
+            <mat-cell *matCellDef="let issue"> {{issue.summary}} </mat-cell>
+        </ng-container>
+
+        <!-- severity Column -->
+        <ng-container matColumnDef="magasin">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>
+                Magasin</mat-header-cell>
+            <mat-cell *matCellDef="let issue">
+                {{issue.magasin}}
+            </mat-cell>
+        </ng-container>
+
+        <!-- handler Column -->
+        <ng-container matColumnDef="chiffre">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>
+                Chiffre d'affaire (Dernière heure)</mat-header-cell>
+            <mat-cell *matCellDef="let issue"> {{issue.chiffre}} €</mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+    <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]">
+    </mat-paginator>
+</div>

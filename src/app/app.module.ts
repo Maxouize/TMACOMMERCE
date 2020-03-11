@@ -23,6 +23,10 @@ import { HomeViewComponent } from './view/home-view/home-view.component';
 import { CommonModule } from '@angular/common';
 import { AdminComponent } from './view/admin/admin.component';
 
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { TableComponent } from './component/table/table.component';
+import { LoaderComponent } from './component/loader/loader.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,9 @@ import { AdminComponent } from './view/admin/admin.component';
     HomeViewComponent,
     NavbarComponent,
     AdminComponent,
+    DashboardComponent,
+    TableComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +55,8 @@ import { AdminComponent } from './view/admin/admin.component';
     MatSortModule,
     ReactiveFormsModule,
     MatSelectModule,
-    CommonModule
+    CommonModule,
+    NgxChartsModule
   ],
   providers: [HttpClientModule,
     // {

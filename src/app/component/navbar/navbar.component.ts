@@ -1,6 +1,5 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { Router } from '@angular/router';
 
 declare interface RouteInfo {
   path: string;
@@ -10,7 +9,8 @@ declare interface RouteInfo {
 }
 export const ROUTES: RouteInfo[] = [
     { path: '/home', title: 'Home', icon: '',  active: true},
-    { path: '/admin', title: 'Admin', icon: '',  active: true}
+    { path: '/admin', title: 'Admin', icon: '',  active: true},
+    { path: '/dashboard', title: 'Dashboard', icon: '',  active: true}
   ];
 
 @Component({

@@ -1,7 +1,8 @@
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeViewComponent } from './view/home-view/home-view.component';
-import { AdminComponent } from "./view/admin/admin.component"
+import { AdminComponent } from './view/admin/admin.component';
 
 
 export const routes: Routes = [
@@ -11,7 +12,8 @@ export const routes: Routes = [
     pathMatch: 'prefix',
   },
   { path: 'home', component: HomeViewComponent },
-  { path: 'admin', component: AdminComponent }
+  { path: 'admin', component: AdminComponent },
+  { path: 'dashboard', component: DashboardComponent}
 ];
 
 @NgModule({

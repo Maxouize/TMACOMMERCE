@@ -17,6 +17,8 @@ export class AxiosService {
         this.axios = axios;
     }
 
+    // local : http://127.0.0.1:8000
+    // http://172.20.10.10:8000
     /**
      * 
      */
@@ -26,41 +28,41 @@ export class AxiosService {
     }
     // GET ENDPOINTS
     async getMagasins() {
-        let res = await this.axios.get('http://172.20.10.10:8000/api/magasin/');
+        let res = await this.axios.get('http://127.0.0.1:8000/api/magasin/');
         return res;
     }
     async getAcheteurs() {
-        let res = await this.axios.get('http://172.20.10.10:8000/api/acheteur/');
+        let res = await this.axios.get('http://127.0.0.1:8000/api/acheteur/');
         return res;
     }
     async getProduits() {
-        let res = await this.axios.get('http://172.20.10.10:8000/api/produit/');
+        let res = await this.axios.get('http://127.0.0.1:8000/api/produit/');
         return res;
     }
     async getCommandes() {
-        let res = await this.axios.get('http://172.20.10.10:8000/api/commande/');
+        let res = await this.axios.get('http://127.0.0.1:8000/api/commande/');
         return res;
     }
     // POST ENDPOINTS
     async postMagasin(data) {
-        let res = await this.axios.post('http://172.20.10.10:8000/api/magasin/', data);
+        let res = await this.axios.post('http://127.0.0.1:8000/api/magasin/', data);
         return res;
     }
     async postAcheteur(data) {
-        let res = await this.axios.post('http://172.20.10.10:8000/api/acheteur/', data);
+        let res = await this.axios.post('http://127.0.0.1:8000/api/acheteur/', data);
         return res;
     }
     async postProduit(data){
-        let res = await this.axios.post('http://172.20.10.10:8000/api/produit/', data);
+        let res = await this.axios.post('http://127.0.0.1:8000/api/produit/', data);
         return res;
     }
     async postCommande(data){
-        let res = await this.axios.post('http://172.20.10.10:8000/api/commande/', data);
+        let res = await this.axios.post('http://127.0.0.1:8000/api/commande/', data);
         return res;
     }
     // PATCH
     async patchAcheteur(data) {
-        let res = await this.axios.patch(`http://172.20.10.10:8000/api/acheteur/${data.id}/`, data);
+        let res = await this.axios.patch(`http://127.0.0.1:8000/api/acheteur/${data.id}/`, data);
         return res;
     }
 }
