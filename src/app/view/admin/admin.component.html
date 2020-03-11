@@ -1,0 +1,6 @@
+<div class="container-admin">
+    <h1>Editer les autorisations des acheteurs</h1>
+    <div class="client-row" *ngFor="let acheteur of listAcheteur">
+        <p>{{acheteur.nom}} {{acheteur.prenom}} - {{acheteur.mail}}</p><button (click)="changeAcheteurStatus(acheteur.id,acheteur.actif)" [ngClass]="(acheteur.actif===true)?'button-actif':'button-inactif'">{{acheteur.actif}}</button>
+    </div>
+</div>
