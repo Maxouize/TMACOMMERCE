@@ -1,8 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeViewComponent } from './view/home-view/home-view.component';
 
 
-const routes: Routes = [];
+export const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'prefix',
+  },
+  { path: 'home', component: HomeViewComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
