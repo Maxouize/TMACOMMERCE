@@ -13,7 +13,7 @@
             placeholder="Liste de produit" required>
             <mat-option *ngFor="let produit of listProduit"
                 [value]="produit?.id">
-                {{ produit?.nom }} {{ produit?.prix }} €
+                {{ produit?.nom }} {{ produit?.prix }} € Avec TVA({{ produit?.prix + produit?.prix * 0.20 }} €) 
             </mat-option>
         </mat-select>
     </mat-form-field>
